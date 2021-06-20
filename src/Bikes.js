@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import createEnturService from "@entur/sdk";
 
 const service = createEnturService({
-  clientName: "annaandresen-test",
+  clientName: "annaandresen-infoskjerm",
 });
 
 const Bikes = () => {
@@ -12,16 +12,17 @@ const Bikes = () => {
     service
       .getBikeRentalStationsByPosition(
         {
-          latitude: 63.428311,
-          longitude: 10.392514,
+          latitude: 63.432703,
+          longitude: 10.416317,
         },
-        230
+        300
       )
       .then((data) => setBikeStations(data));
   }, []);
 
   return (
     <div className="Bikes">
+      <h2>Bysykkelstasjoner</h2>
       {bikeStations.map((station) => (
         <Station key={station.id} station={station} />
       ))}
@@ -37,7 +38,8 @@ const Station = (props) => {
 
   return (
     <div className="station">
-      {name} - {bikesAvailable} - {spacesAvailable}
+      <h3>{name}</h3>
+      Sykler: {bikesAvailable} - Ledig plass: {spacesAvailable}
     </div>
   );
 };

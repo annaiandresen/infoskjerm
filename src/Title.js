@@ -1,9 +1,8 @@
 import React from "react";
 
 const Title = () => {
-  console.log("tittel lastet inn");
 
-  return <h1>Infoskjerm</h1>;
+  return <h1>Annas Infoskjerm</h1>;
 };
 
 // Dette er det samme som å skrive
