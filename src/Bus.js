@@ -27,7 +27,7 @@ const Bus = (props) => {
     }, [departures]);
   
     return (
-      <div className="busses">
+      <div className="buses">
         <div className="from">
           <h2>Bakkegata - Fra Sentrum</h2>
           {departuresFromCenter.slice(0, size).map((departure) => (
@@ -50,7 +50,7 @@ const Bus = (props) => {
     const departureTime = DateTime.fromISO(expectedDepartureTime);
     return (
       <div className="departure">
-        <h5>#{serviceJourney.journeyPattern.line.publicCode}</h5>Avgang: {departureTime.toLocaleString(DateTime.TIME_24_SIMPLE)}
+        <p>{serviceJourney.journeyPattern.line.publicCode}</p>Avgang: {departureTime.toLocaleString(DateTime.TIME_24_SIMPLE)}
       </div>
     );
   };
