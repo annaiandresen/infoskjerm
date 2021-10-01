@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+//import "./App.css";
 import DadJoke from "./DadJoke";
 import Bikes from "./Bikes";
 //import Reddit from "./Reddit";
@@ -14,9 +14,12 @@ function App() {
     <div className="App">
         <Clock />
       <div className="gridContent">
-        <Bikes />
-        <Bus />
-        <DadJoke />
+        <div className="bikesAndJokes">
+          <Bikes />
+          <DadJoke />
+        </div>
+        <Bus isTowardsCenter={true}/>
+        <Bus isTowardsCenter={false}/>
       </div>
     </div>
   );

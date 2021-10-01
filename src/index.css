@@ -1,12 +1,25 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Scada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --black: #25292E;
+  --grey: #2F3438;
+  --red: #FF3E58;
+  --blue: #01A4F6;
+  --white: #fff;
+
+} 
+
+*{
+  font-family: 'Roboto', sans-serif;
+
+}
+
 body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: #25292E;
   width: 80%
 }
@@ -15,3 +28,71 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.App {
+  text-align: center;
+  color: var(--white);
+}
+
+h2 {
+  padding-bottom: 10px;
+}
+
+/* CLOCK */
+
+.clock{
+  margin-top: 8vh;
+  margin-bottom: 5vh;
+}
+
+.time{
+  font-family: 'Scada', sans-serif;
+  font-size: 84px;
+  margin-bottom: 0;
+}
+
+.date{
+  text-transform: capitalize;
+  margin-top:0;
+}
+
+/* GRIDS */
+
+.gridContent{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5vh;
+}
+
+.gridContent > * {
+  background-color: var(--grey);
+  border-radius: 10px;
+  padding: 4vh;
+
+}
+
+.bikesAndJokes, .from{
+  border: var(--red) groove 1px;
+}
+
+.towards{
+  border: var(--blue) groove 1px;
+}
+
+.bikesAndJokes > *{
+  margin-bottom: 10vh;
+}
+
+/* BUSES */
+.busDirection{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5vh;
+}
+
+.departure >p:first-child{
+  font-size: 24px;
+  color: #c2cbd3;
+}
+
